@@ -12,15 +12,3 @@ const update = function (e) {
     setInterval(update,1000)
 }
 mBtn.addEventListener('click',update)
-        function updateShadowColor() {
-            const clockBox = document.getElementById('clock-box');
-            const now = new Date();
-            const seconds = now.getSeconds();
-            const hue = (seconds / 60) * 360; // Convert seconds to hue (0-360)
-
-            const shadowColor = `hsl(${hue}, 100%, 50%)`;
-            clockBox.style.boxShadow = `0px 0px 30px ${shadowColor}`;
-        }
-
-        // Update the shadow color every second
-        setInterval(updateShadowColor, 100);
